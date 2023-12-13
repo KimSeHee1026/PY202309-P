@@ -1,5 +1,10 @@
 from nltk.sentiment import SentimentIntensityAnalyzer
 
+def read_diary_word(diary):
+    # 일기 텍스트를 단어로 분리하여 리스트로 반환하는 함수
+    words = diary.split()
+    return words
+
 def analyze_sentiment(text):
     # 입력된 텍스트에 대한 감정 분석을 수행하는 함수
     sia = SentimentIntensityAnalyzer()
