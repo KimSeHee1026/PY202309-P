@@ -8,6 +8,7 @@ def diary_input():
             if diary:
                 diaries.append(diary)
                 break
+    print(diaries)
     return diaries
 
 def load_diary_from_file(filename):
@@ -22,3 +23,8 @@ def load_diary_from_file(filename):
         except Exception as e:
             print(f"Error: {e}")
             exit()
+
+def read_diary_word(diary):
+    # 일기 텍스트를 단어로 분리하여 리스트로 반환하는 함수
+    words = diary.split()
+    return words
